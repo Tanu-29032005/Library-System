@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Student Register</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div>
+          <div class="site-title">Campus Library</div>
+          <div class="small">Create account</div>
+        </div>
+      </div>
+      <div class="row">
+        <a class="small" href="student-login.html">Login</a>
+      </div>
+    </header>
+
+    <main class="card">
+      <h2>Register</h2>
+      <form id="regForm" class="form">
+        <input id="regUsername" class="input" placeholder="Username" required>
+        <input id="regEmail" class="input" placeholder="Email" type="email" required>
+        <input id="regPassword" class="input" placeholder="Password" type="password" required>
+        <div class="row">
+          <button class="btn" type="submit">Register</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

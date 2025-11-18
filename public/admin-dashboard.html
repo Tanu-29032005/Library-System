@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div>
+          <div class="site-title">Library Admin</div>
+          <div class="small">Dashboard</div>
+        </div>
+      </div>
+      <div class="row">
+        <a class="small" href="add-book.html">Add Book</a> <!-- Added button -->
+        <a class="small" href="#" onclick="logout()">Sign out</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h3>Registered Students</h3>
+        <table id="studentsTable" class="table">
+          <thead><tr><th>Username</th><th>Email</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="card" style="margin-top:18px">
+        <h3>Pending Requests</h3>
+        <table id="reqTable" class="table">
+          <thead><tr><th>Student</th><th>Book</th><th>Requested On</th><th>Actions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="card" style="margin-top:18px">
+        <h3>Books Inventory</h3>
+        <table id="booksTable" class="table">
+          <thead><tr><th>Title</th><th>Author</th><th>ISBN</th><th>Copies</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

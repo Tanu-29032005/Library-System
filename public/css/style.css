@@ -1,0 +1,17 @@
+/* styles.css - simple responsive layout */
+:root{--primary:#0f62fe;--bg:#f6f8fb;--card:#fff;--muted:#6b7280}
+*{box-sizing:border-box}body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:var(--bg);color:#0f1724}
+.container{max-width:1000px;margin:28px auto;padding:0 16px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--primary),#00bfa6);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(3,13,38,0.06)}
+.form{display:flex;flex-direction:column;gap:10px;max-width:480px}
+.input{padding:10px;border:1px solid #e6e9ef;border-radius:8px}
+.btn{padding:10px 12px;border-radius:8px;border:none;background:var(--primary);color:#fff;cursor:pointer}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:10px;border-bottom:1px solid #eef2f6;text-align:left}
+.small{font-size:13px;color:var(--muted)}
+.row{display:flex;gap:12px;align-items:center}
+.actions button{margin-right:8px}
+@media(max-width:700px){.row{flex-direction:column;align-items:stretch}}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div>
+          <div class="site-title">Campus Library</div>
+          <div class="small">Dashboard</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small">Hello, <strong id="stuName">Student</strong></div>
+        <a class="small" href="browse.html">Browse Books</a>
+        <a class="small" href="#" onclick="logout()">Logout</a>
+      </div>
+    </header>
+
+    <main class="card">
+      <h3>My Requests</h3>
+      <table id="myRequests" class="table">
+        <thead>
+          <tr>
+            <th>Book</th>
+            <th>Requested On</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h3 style="margin-top:18px">My Loans</h3>
+      <table id="myLoans" class="table">
+        <thead>
+          <tr>
+            <th>Book</th>
+            <th>Borrowed</th>
+            <th>Due</th>
+            <th>Returned</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
