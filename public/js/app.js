@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3000";
+const baseUrl = window.location.origin;
 
 async function api(path, opts) {
   opts = opts || {};
