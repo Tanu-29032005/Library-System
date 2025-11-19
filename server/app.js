@@ -24,7 +24,7 @@ app.use("/api/requests", require("./routes/requestRoutes"));
 app.use("/api/loans", require("./routes/loanRoutes"));
 
 // For any other route, serve index.html (handle SPA or frontend routing)
-app.get("*", (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
