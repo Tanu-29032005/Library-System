@@ -36,7 +36,11 @@
     </main>
   </div>
 
+  <!-- Load shared API logic -->
+  <script src="js/app.js"></script>
+
   <script>
+    // Override Add Book logic to use shared api() function
     document.getElementById("bookForm").addEventListener("submit", async (e) => {
       e.preventDefault();
 
@@ -45,19 +49,17 @@
         author: document.getElementById("bAuthor").value,
         isbn: document.getElementById("bISBN").value,
         genre: document.getElementById("bGenre").value,
-        copies: document.getElementById("bCopies").value
+        copies: Number(document.getElementById("bCopies").value) || 1
       };
 
-      const res = await fetch("http://localhost:3000/api/books/add", {
+      const r = await api("/api/books/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
       });
 
-      const result = await res.json();
-      alert(result.message);
-
-      document.getElementById("bookForm").reset();
+      alert(r.data.message || (r.ok ? "Book added" : "Failed"));
+      if (r.ok) document.getElementById("bookForm").reset();
     });
   </script>
 </body>
